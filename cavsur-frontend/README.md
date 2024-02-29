@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# CavSur
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Descripción** 
 
-In the project directory, you can run:
 
-### `npm start`
+CAVSUR es una entidad creada para satisfacer
+necesidades de terceros basada en la asistencia a
+partidos, es decir la prestación de servicios a entidades que
+lo requieran, esto por todo el valle del sur.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La persona que se registra en la página web podrá postular eventos deportivos a realizar, este evento
+necesitará de la asistencia de árbitros los cuales
+el mismo usuario registrado solicita dependiendo
+de los que se encuentren disponibles. Adicional
+tendrá un apartado donde registrará los detalles
+del evento en cuestion.
 
-### `npm test`
+Este proyecto se esta trabajando en React con Laravel, y como gestor de base de datos MySQL.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+**Instalación** 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+pasos para abrir el proyecto:
+- Abrir el Visual Studio Code.
+- Iniciar el xampp o el gestor de base de datos.
+- Abrir la terminal de comandos.
+- Ingresar el comando 
+```bash
+  php artisan run serve
+  npm run dev
+```
+- Darle click al link que nos arroja la consola o ir al buscador de google y poner localhost + el puerto correspodiente.
+- Ya está todo hecho, ya se puede navegar por la página.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Estructura del proyecto** 
 
-### `npm run eject`
+Nuestro proyecto trabajado con Laravel se ve estructurado de esta forma:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+app/: En este directorio encontramos los controladores que a su vez contienen los Middleware y los Requests. Aparte de los controladores se muestran los modelos de cada entidad.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+database/: Carpeta de la base de datos donde se encontrarán todas las migraciones necesarias y hechas en nuestro proyecto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+resoucers/: Acá almacenamos todos los componentes de nuestro proyecto,  todos los layouts y las rutas necesarias para que el proyecto funcione de manera correcta.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Uso** 
 
-## Learn More
+Primeramente el usuario deberá registrarse para poder acceder a los apartados y funcionalidades de la página. Luego de esto podrá navegar, consultar sobre la corporación y ver las fotos que representa a la comunidad de CavSur.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este usuario puede registrar eventos propios o visualizar los propuestos por demás personas. Agregará eventos mediante un formulario que pide los siguientes datos:
+- Datos de la persona a cargo tales como: Nombre, Apellidos, Número de documento y su número de contacto.
+- Datos propios del evento como: Ubicación, fecha y hora, actividad a realizar y el número de arbitros requeridos para dicho evento.
+Despues de finalizar con el registro, si se le olvidó algun dato imporatante puede modificar el evento recientemente agregado o eliminarlo si así lo desea, estas funcionalidades se encuentran en la parte derecha de la tabla donde se visualiza el evento creado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ademas de registrar eventos podrá anexar los detalles de este o visualizar los dellates de eventos anteriores propuestos por si mismo o por otra persona, al igual mediante un formulario que pedirá los datos de la persona y los detalles del dichoso evento. Se podrá modificar y eliminar de la misma manera.
 
-### Code Splitting
+Por parte del Administrador tendrá un apartado donde registrará a los arbitros disponibles para que asistan a los eventos registrados por los usuarios. Este formulario será basado en los datos personales del arbitro, tales como: Nombre, Apellidso, Número de documento y número de contacto. Adicional también podrá modificar la información o eliminarla en caso tal de que el arbitro no se encuentre disponible. 
+El Administrador únicamente podrá visualizar los eventos y los detalles de los partidos registrados pero no podrá ejercer acciones sobre estos como modificar o eliminar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+**Estado** 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Actualmente este proyecto sigue en desarrollo. Su equipo tabaja en las actualizaciones tanto a nivel de diseño gráfico como infraestructual para entregar un proyecto totalmente funcional que no se deje debilitar por los demás en el mercado y así llegar al exito planeado.
 
-### Making a Progressive Web App
+**Créditos**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En desarrollo por:
++ Jean Pierre Valencia 
++ Manuela Gallego
+                
