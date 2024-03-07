@@ -1,13 +1,9 @@
 import mongoose from "mongoose";
 
-const matchShema = new mongoose.Schema(
+const eventShema = new mongoose.Schema(
     {
         location: {
             type: String,
-            required: true,
-        },
-        num_referee: {
-            type: Number,
             required: true,
         },
         date: {
@@ -18,8 +14,9 @@ const matchShema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        details: {
-            type: String,
+        num_referee: {
+            type: Number,
+            required: true,
         },
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -31,4 +28,4 @@ const matchShema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model("Match", matchShema);
+export default mongoose.model("Event", eventShema);

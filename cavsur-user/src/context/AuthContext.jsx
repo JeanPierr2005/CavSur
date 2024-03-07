@@ -53,6 +53,12 @@ export const AuthProvider = ({ children }) => {
         }
     }, [errors]);
 
+    const logout = () => {
+        Cookies.remove("token");
+        setIsAuthenticated(false);
+        setUser(null);
+    };
+
     useEffect(() => {
         async function checkLogin() {
             const cookies = Cookies.get();
@@ -62,7 +68,7 @@ export const AuthProvider = ({ children }) => {
                 setLoading(false);
                 return setUser(null);
             }
-            
+
             try {
                 const res = await verifyTokenRequet(cookies.token);
                 if (!res.data) {
@@ -88,6 +94,7 @@ export const AuthProvider = ({ children }) => {
             value={{
                 signup,
                 signin,
+                logout,
                 loading,
                 user,
                 isAuthenticated,

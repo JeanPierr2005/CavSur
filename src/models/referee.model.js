@@ -1,24 +1,19 @@
 import mongoose from "mongoose";
 
-const matchShema = new mongoose.Schema(
+const refereeSchema = new mongoose.Schema(
     {
-        location: {
+        name: {
             type: String,
             required: true,
         },
-        num_referee: {
-            type: Number,
-            required: true,
+        lastname: {
+            type: String,
         },
-        date: {
-            type: Date,
-            default: Date.now,
-        },
-        activity: {
+        num_document: {
             type: String,
             required: true,
         },
-        details: {
+        phone: {
             type: String,
         },
         user: {
@@ -31,4 +26,4 @@ const matchShema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model("Match", matchShema);
+export default mongoose.model("Referee", refereeSchema);

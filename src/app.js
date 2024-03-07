@@ -5,6 +5,8 @@ import cors from "cors";
 
 import authRoutes from "./routes/auth.routes.js";
 import matchRoutes from "./routes/matches.routes.js";
+import refereeRoutes from "./routes/referee.routes.js";
+import eventRoutes from "./routes/event.routes.js";
 
 const app = express();
 
@@ -20,5 +22,7 @@ app.use(cookieParser());
 
 app.use("/api", authRoutes);
 app.use("/api", matchRoutes);
+app.use("/api", refereeRoutes);
+app.use("/api", eventRoutes);
 
 export default app;
